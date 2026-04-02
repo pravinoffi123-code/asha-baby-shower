@@ -6,11 +6,10 @@
 
   <title>🍼 Baby Shower – Asha & Sasi Kumar | May 1st, Chennai</title>
   <meta name="description" content="You're invited! Join us to celebrate the baby shower of Asha & Sasi Kumar on May 1st, 2026 at Namma Veedu Vasanta Bhavan, Vadapalani, Chennai. 🌟"/>
-
-  <meta property="og:type"        content="website"/>
-  <meta property="og:title"       content="🍼 Baby Shower Invitation – Asha & Sasi Kumar"/>
-  <meta property="og:description" content="Join us on May 1st, 2026 at 12:00 PM | Namma Veedu Vasanta Bhavan, Vadapalani, Chennai 🌟 A new star is on its way!"/>
-  <meta property="og:image"       content="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&q=80"/>
+  <meta property="og:type"         content="website"/>
+  <meta property="og:title"        content="🍼 Baby Shower Invitation – Asha & Sasi Kumar"/>
+  <meta property="og:description"  content="Join us on May 1st, 2026 at 12:00 PM | Namma Veedu Vasanta Bhavan, Vadapalani, Chennai 🌟"/>
+  <meta property="og:image"        content="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&q=80"/>
   <meta property="og:image:width"  content="800"/>
   <meta property="og:image:height" content="533"/>
   <meta name="twitter:card"        content="summary_large_image"/>
@@ -23,125 +22,185 @@
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
     body {
-      min-height: 100vh;
-      font-family: 'Nunito', sans-serif;
-      display: flex; align-items: center; justify-content: center;
-      padding: 30px 16px;
-      position: relative; overflow-x: hidden;
-      background: #fef9f2;
+      min-height:100vh;
+      font-family:'Nunito',sans-serif;
+      display:flex; align-items:center; justify-content:center;
+      padding:30px 16px;
+      position:relative; overflow-x:hidden;
+      background:#fef6ff;
     }
     body::before {
-      content: '';
-      position: fixed; inset: 0; z-index: 0;
+      content:'';
+      position:fixed; inset:0; z-index:0;
       background:
         radial-gradient(ellipse 70% 50% at 10% 20%, rgba(255,213,128,.35) 0%, transparent 55%),
-        radial-gradient(ellipse 60% 60% at 90% 80%, rgba(100,210,190,.25) 0%, transparent 55%),
-        radial-gradient(ellipse 50% 40% at 50% 50%, rgba(255,180,120,.15) 0%, transparent 60%);
+        radial-gradient(ellipse 60% 60% at 90% 80%, rgba(100,210,190,.28) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 40% at 50% 50%, rgba(220,180,255,.18) 0%, transparent 60%);
     }
 
-    .star { position: fixed; pointer-events: none; z-index: 1; font-size: 14px; opacity: 0; animation: twinkle ease-in-out infinite; }
+    /* ── Stars ── */
+    .star { position:fixed; pointer-events:none; z-index:1; font-size:14px; opacity:0; animation:twinkle ease-in-out infinite; }
     @keyframes twinkle { 0%,100%{opacity:0;transform:scale(.6)} 50%{opacity:.7;transform:scale(1.1)} }
+
+    /* ── Sleeping baby bounce animation ── */
+    .baby-float {
+      display:inline-block;
+      animation:babyFloat 3s ease-in-out infinite;
+      font-size:36px; line-height:1;
+    }
+    @keyframes babyFloat {
+      0%,100% { transform:translateY(0) rotate(-3deg); }
+      50%      { transform:translateY(-8px) rotate(3deg); }
+    }
 
     /* ── Music Button ── */
     .music-btn {
-      position: fixed; bottom: 24px; right: 24px; z-index: 100;
-      width: 52px; height: 52px; border-radius: 50%;
-      background: linear-gradient(135deg, #f4845f, #f9c74f);
-      border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px;
-      box-shadow: 0 4px 20px rgba(244,132,95,.45);
-      animation: pulse 2s ease-in-out infinite;
-      transition: transform .2s;
+      position:fixed; bottom:24px; right:24px; z-index:100;
+      width:56px; height:56px; border-radius:50%;
+      background:linear-gradient(135deg,#f4845f,#f9c74f);
+      border:none; cursor:pointer;
+      display:flex; align-items:center; justify-content:center;
+      font-size:24px;
+      box-shadow:0 4px 20px rgba(244,132,95,.5);
+      animation:pulse 2s ease-in-out infinite;
+      transition:transform .2s;
     }
-    .music-btn:hover { transform: scale(1.1); }
+    .music-btn:hover { transform:scale(1.1); }
     @keyframes pulse {
-      0%,100% { box-shadow: 0 4px 20px rgba(244,132,95,.45); }
-      50%      { box-shadow: 0 4px 32px rgba(244,132,95,.75); }
+      0%,100% { box-shadow:0 4px 20px rgba(244,132,95,.45); }
+      50%      { box-shadow:0 4px 36px rgba(244,132,95,.8); }
     }
     .music-label {
-      position: fixed; bottom: 80px; right: 14px; z-index: 100;
-      font-size: 10px; font-weight: 700; color: #f4845f;
-      letter-spacing: .1em; text-transform: uppercase;
-      background: #fff; border-radius: 20px;
-      padding: 4px 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,.1);
+      position:fixed; bottom:84px; right:12px; z-index:100;
+      font-size:10px; font-weight:700; color:#f4845f;
+      letter-spacing:.08em; text-transform:uppercase;
+      background:#fff; border-radius:20px;
+      padding:4px 10px;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+      font-family:'Nunito',sans-serif;
+      white-space:nowrap;
     }
 
     /* ── Card ── */
     .card {
-      position: relative; z-index: 2;
-      width: 100%; max-width: 600px;
-      border-radius: 24px; overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,.06), 0 24px 64px rgba(0,0,0,.13), 0 0 0 4px rgba(255,255,255,.85);
-      animation: popIn .85s cubic-bezier(.34,1.46,.64,1) both;
+      position:relative; z-index:2;
+      width:100%; max-width:600px;
+      border-radius:24px; overflow:hidden;
+      box-shadow:0 2px 12px rgba(0,0,0,.06),0 24px 64px rgba(0,0,0,.13),0 0 0 4px rgba(255,255,255,.9);
+      animation:popIn .85s cubic-bezier(.34,1.46,.64,1) both;
     }
     @keyframes popIn { from{opacity:0;transform:scale(.85) translateY(24px)} to{opacity:1;transform:scale(1) translateY(0)} }
 
+    /* ── Shimmer bar ── */
     .shimmer-bar {
-      height: 7px;
-      background: linear-gradient(90deg,#f9c74f,#90e0c8,#f4845f,#b5a8f5,#74c4f5,#f9c74f);
-      background-size: 300% 100%;
-      animation: slide 4s linear infinite;
+      height:8px;
+      background:linear-gradient(90deg,#f9c74f,#f4845f,#e040fb,#2ec4b6,#74c4f5,#f9c74f);
+      background-size:300% 100%;
+      animation:slide 3s linear infinite;
     }
     @keyframes slide { 0%{background-position:0%} 100%{background-position:300%} }
 
+    /* ── Banner ── */
     .banner {
-      background: linear-gradient(145deg, #2ec4b6 0%, #3bd6c5 40%, #20b2aa 100%);
-      padding: 38px 30px 32px; text-align: center;
-      position: relative; overflow: hidden;
+      background:linear-gradient(145deg,#7c3aed 0%,#a855f7 45%,#c084fc 100%);
+      padding:38px 30px 32px; text-align:center;
+      position:relative; overflow:hidden;
     }
     .banner::after {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 25% 25%, rgba(255,255,255,.22) 0%, transparent 55%),
-                  radial-gradient(ellipse at 75% 75%, rgba(255,255,255,.10) 0%, transparent 50%);
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(ellipse at 25% 25%,rgba(255,255,255,.2) 0%,transparent 55%),
+                 radial-gradient(ellipse at 75% 75%,rgba(255,255,255,.10) 0%,transparent 50%);
     }
-    .banner-emoji { font-size: 28px; letter-spacing: 8px; position:relative; z-index:1; margin-bottom:8px; }
-    .banner-tag   { font-size:12px; letter-spacing:.32em; text-transform:uppercase; font-weight:700; color:rgba(255,255,255,.88); position:relative; z-index:1; }
+    .banner-emoji  { font-size:26px; letter-spacing:6px; position:relative; z-index:1; margin-bottom:8px; }
+    .banner-tag    { font-size:11px; letter-spacing:.3em; text-transform:uppercase; font-weight:700; color:rgba(255,255,255,.88); position:relative; z-index:1; }
     .banner-heading {
       font-family:'Playfair Display',serif; font-size:56px; font-style:italic; font-weight:700;
-      color:#fff; line-height:1.05; text-shadow:0 4px 24px rgba(0,120,110,.35);
+      color:#fff; line-height:1.05; text-shadow:0 4px 24px rgba(80,0,120,.35);
       position:relative; z-index:1; margin:8px 0 10px;
     }
-    .banner-sub { font-size:13px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.9); position:relative; z-index:1; }
+    .banner-sub { font-size:13px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.92); position:relative; z-index:1; }
 
+    /* ── Sleeping baby section in banner ── */
+    .baby-section {
+      position:relative; z-index:1;
+      margin-top:16px;
+      display:flex; align-items:center; justify-content:center; gap:10px;
+    }
+    .baby-zzz {
+      font-size:13px; color:rgba(255,255,255,.7);
+      font-family:'Nunito',sans-serif; font-weight:700;
+      letter-spacing:.1em;
+      animation:zzz 2s ease-in-out infinite;
+    }
+    @keyframes zzz {
+      0%,100% { opacity:.4; transform:translateY(0); }
+      50%      { opacity:1;  transform:translateY(-4px); }
+    }
+
+    /* ── Scallop ── */
     .scallop { background:#fff; position:relative; height:28px; margin-top:-1px; overflow:hidden; }
     .scallop::before {
       content:''; position:absolute; top:-22px; left:50%; transform:translateX(-50%);
       width:120%; height:44px;
-      background:linear-gradient(145deg,#2ec4b6 0%,#20b2aa 100%);
+      background:linear-gradient(145deg,#a855f7 0%,#7c3aed 100%);
       border-radius:0 0 50% 50%;
     }
 
+    /* ── Body ── */
     .body { background:#fff; padding:16px 38px 40px; }
 
     .greeting {
       font-family:'Playfair Display',serif; font-size:16px; font-style:italic;
-      color:#5a5065; line-height:1.85;
-      border-left:4px solid #f9c74f; padding-left:18px; margin-bottom:30px;
+      color:#5a4070; line-height:1.85;
+      border-left:4px solid #f9c74f; padding-left:18px; margin-bottom:28px;
       animation:fadeUp .7s .3s both;
     }
 
-    .parents-block { text-align:center; margin-bottom:30px; animation:fadeUp .7s .45s both; }
-    .parents-tag { font-size:11px; letter-spacing:.3em; text-transform:uppercase; font-weight:700; color:#ccc; margin-bottom:8px; }
+    /* ── Parents block ── */
+    .parents-block { text-align:center; margin-bottom:28px; animation:fadeUp .7s .45s both; }
+
+    /* Fix: ribbon fits one line — use flex, nowrap, smaller font on mobile */
+    .parents-tag {
+      display:flex; align-items:center; justify-content:center;
+      gap:6px; flex-wrap:nowrap; white-space:nowrap;
+      font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+      font-weight:800; margin-bottom:10px;
+      background:linear-gradient(135deg,#f4845f,#e040fb,#7c3aed);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      background-clip:text;
+      overflow:hidden;
+    }
+    /* Make text slightly smaller on very small screens */
+    @media (max-width:380px) {
+      .parents-tag { font-size:9px; letter-spacing:.12em; gap:4px; }
+    }
+
     .parents-names {
       font-family:'Playfair Display',serif; font-size:38px; font-weight:700; font-style:italic; line-height:1.15;
-      background:linear-gradient(135deg,#f4845f 0%,#f9c74f 50%,#2ec4b6 100%);
+      background:linear-gradient(135deg,#f4845f 0%,#f9c74f 40%,#a855f7 100%);
       -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
     }
-    .amp-sep { font-size:26px; font-weight:300; color:#f9c74f; -webkit-text-fill-color:#f9c74f; }
+    .amp-sep { font-size:26px; font-weight:300; -webkit-text-fill-color:#f9c74f; color:#f9c74f; }
 
+    /* ── Custom SVG Calendar Icon ── */
+    .cal-icon {
+      width:44px; height:44px; flex-shrink:0;
+    }
+
+    /* ── Info cards ── */
     .info-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; animation:fadeUp .7s .6s both; }
-    .icard { border-radius:18px; padding:20px 18px; }
-    .icard.date { background:linear-gradient(135deg,#fffbe8,#fff3c4); border:2px solid #f9c74f; }
+    .icard { border-radius:18px; padding:20px 16px; }
+    .icard.date { background:linear-gradient(135deg,#fff8ff,#f3e8ff); border:2px solid #c084fc; }
     .icard.time { background:linear-gradient(135deg,#e8fbf8,#c8f5ee); border:2px solid #2ec4b6; }
-    .icard-icon { font-size:28px; margin-bottom:6px; }
+    .icard-icon-wrap { margin-bottom:6px; }
     .icard-label { font-size:10px; letter-spacing:.28em; text-transform:uppercase; font-weight:700; color:#bbb; margin-bottom:5px; }
     .icard-value { font-family:'Nunito',sans-serif; font-size:24px; font-weight:800; }
-    .icard.date .icard-value { color:#e07b00; }
+    .icard.date .icard-value { color:#7c3aed; }
     .icard.time .icard-value { color:#1a9e94; }
-    .icard-sub { font-size:12px; font-weight:600; color:#bbb; margin-top:3px; }
+    .icard-sub { font-size:12px; font-weight:700; color:#bbb; margin-top:3px; }
+    .icard.time .icard-icon-wrap { font-size:28px; }
 
+    /* ── Venue card ── */
     .venue-card {
       border-radius:18px; padding:22px;
       background:linear-gradient(135deg,#fff5f0,#ffe8df); border:2px solid #f4845f;
@@ -154,8 +213,8 @@
       display:flex; align-items:center; justify-content:center; font-size:26px;
     }
     .venue-label { font-size:10px; letter-spacing:.28em; text-transform:uppercase; font-weight:700; color:#bbb; margin-bottom:5px; }
-    .venue-name { font-family:'Playfair Display',serif; font-size:21px; font-weight:700; color:#c0541a; line-height:1.25; }
-    .venue-addr { font-size:13px; color:#d07040; font-weight:600; margin-top:4px; }
+    .venue-name  { font-family:'Playfair Display',serif; font-size:21px; font-weight:700; color:#c0541a; line-height:1.25; }
+    .venue-addr  { font-size:13px; color:#d07040; font-weight:600; margin-top:4px; }
 
     .map-btn {
       display:flex; align-items:center; justify-content:center; gap:8px;
@@ -163,37 +222,68 @@
       background:linear-gradient(135deg,#f4845f 0%,#f9c74f 100%);
       color:#fff; text-decoration:none; font-weight:800; font-size:14px;
       box-shadow:0 6px 22px rgba(244,132,95,.38);
-      transition:transform .2s, box-shadow .2s;
+      transition:transform .2s,box-shadow .2s;
     }
     .map-btn:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(244,132,95,.48); }
 
+    /* ── Divider ── */
     .divider { text-align:center; font-size:22px; letter-spacing:10px; margin:26px 0 22px; animation:fadeUp .7s .9s both; }
 
+    /* ── Closing ── */
     .closing {
       text-align:center;
-      font-family:'Playfair Display',serif; font-size:18px; font-style:italic; color:#2ec4b6; line-height:1.8;
-      background:linear-gradient(135deg,#e8fbf8,#f0fff9);
-      border-radius:18px; padding:22px 28px; border:2px solid #90e0d8;
+      font-family:'Playfair Display',serif; font-size:18px; font-style:italic;
+      background:linear-gradient(135deg,#7c3aed,#e040fb,#f4845f);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+      line-height:1.8;
+      background-color:linear-gradient(135deg,#f8f0ff,#fff0fb);
+      border-radius:18px; padding:22px 28px; border:2px solid #dcc8ff;
       animation:fadeUp .7s 1s both;
+      position:relative;
+    }
+    .closing-wrap {
+      background:linear-gradient(135deg,#f8f0ff,#fff5fb);
+      border-radius:18px; border:2px solid #dcc8ff;
+      animation:fadeUp .7s 1s both;
+      overflow:hidden;
+    }
+    .closing-inner {
+      padding:22px 28px; text-align:center;
+    }
+    .closing-text {
+      font-family:'Playfair Display',serif; font-size:18px; font-style:italic;
+      background:linear-gradient(135deg,#7c3aed,#e040fb,#f4845f);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+      line-height:1.8;
     }
 
+    /* ── Footer ── */
     .foot {
-      background:linear-gradient(135deg,#f4845f 0%,#f9c74f 35%,#2ec4b6 70%,#74c4f5 100%);
+      background:linear-gradient(135deg,#7c3aed 0%,#e040fb 35%,#f4845f 70%,#f9c74f 100%);
       padding:18px 30px; text-align:center;
       font-weight:800; font-size:13px; letter-spacing:.18em; text-transform:uppercase;
-      color:#fff; text-shadow:0 1px 5px rgba(0,0,0,.18);
+      color:#fff; text-shadow:0 1px 5px rgba(0,0,0,.2);
     }
 
     @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
 
+    /* ── Mobile fixes ── */
     @media (max-width:480px) {
-      .body { padding:12px 20px 32px; }
-      .banner-heading { font-size:42px; }
-      .parents-names { font-size:30px; }
+      .body { padding:12px 18px 32px; }
+      .banner-heading { font-size:40px; }
+      .parents-names  { font-size:30px; }
+      .info-row { gap:10px; }
+      .icard { padding:16px 12px; }
+      .icard-value { font-size:20px; }
     }
   </style>
 </head>
 <body>
+
+<!-- Background music using uploaded file -->
+<audio id="bgMusic" loop preload="auto">
+  <source src="music.mp3.mpeg" type="audio/mpeg"/>
+</audio>
 
 <script>
   /* ── Stars ── */
@@ -206,107 +296,61 @@
     document.body.appendChild(s);
   }
 
-  /* ── Lullaby Music ── */
-  let audioCtx = null;
-  let isPlaying = false;
-  let stopFlag  = false;
+  /* ── Music ── */
+  const music   = document.getElementById('bgMusic');
+  music.volume  = 0.35;
+  let playing   = false;
 
-  // Twinkle Twinkle Little Star notes (Hz)
-  const notes = [
-    261.63, 261.63, 392.00, 392.00, 440.00, 440.00, 392.00,  // Twinkle twinkle little star
-    349.23, 349.23, 329.63, 329.63, 293.66, 293.66, 261.63,  // How I wonder what you are
-    392.00, 392.00, 349.23, 349.23, 329.63, 329.63, 293.66,  // Up above the world so high
-    392.00, 392.00, 349.23, 349.23, 329.63, 329.63, 293.66,  // Like a diamond in the sky
-    261.63, 261.63, 392.00, 392.00, 440.00, 440.00, 392.00,  // Twinkle twinkle little star
-    349.23, 349.23, 329.63, 329.63, 293.66, 293.66, 261.63   // How I wonder what you are
-  ];
-
-  async function playLullaby() {
-    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    if (audioCtx.state === 'suspended') await audioCtx.resume();
-    stopFlag  = false;
-    isPlaying = true;
-
-    const noteDur = 0.55;
-    let time = audioCtx.currentTime;
-
-    for (let i = 0; i < notes.length; i++) {
-      if (stopFlag) break;
-
-      const osc  = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(notes[i], time);
-
-      gain.gain.setValueAtTime(0, time);
-      gain.gain.linearRampToValueAtTime(0.18, time + 0.05);
-      gain.gain.linearRampToValueAtTime(0.15, time + noteDur - 0.1);
-      gain.gain.linearRampToValueAtTime(0,    time + noteDur);
-
-      osc.start(time);
-      osc.stop(time + noteDur);
-      time += noteDur;
-
-      await new Promise(r => setTimeout(r, noteDur * 1000));
-    }
-
-    if (!stopFlag) playLullaby(); // loop
-    else isPlaying = false;
+  function updateBtn(on) {
+    document.getElementById('musicBtn').textContent  = on ? '🔊' : '🎵';
+    document.getElementById('musicLabel').textContent = on ? 'Music On' : 'Tap for Music';
   }
 
   function toggleMusic() {
-    const btn = document.getElementById('musicBtn');
-    const lbl = document.getElementById('musicLabel');
-    if (!isPlaying) {
-      playLullaby();
-      btn.textContent = '🔊';
-      lbl.textContent = 'Music On';
+    if (!playing) {
+      music.play().then(() => { playing = true;  updateBtn(true);  }).catch(()=>{});
     } else {
-      stopFlag  = true;
-      isPlaying = false;
-      btn.textContent = '🎵';
-      lbl.textContent = 'Play Music';
+      music.pause(); playing = false; updateBtn(false);
     }
   }
 
-  /* ── Auto-start on very first touch/click anywhere ──
-     Browsers block audio until user interaction.
-     This starts music the moment user taps/clicks anywhere on the page. */
+  /* Auto-start on first interaction */
   function autoStart() {
-    if (!isPlaying) {
-      playLullaby();
-      const btn = document.getElementById('musicBtn');
-      const lbl = document.getElementById('musicLabel');
-      if (btn) btn.textContent = '🔊';
-      if (lbl) lbl.textContent = 'Music On';
+    if (!playing) {
+      music.play().then(() => { playing = true; updateBtn(true); }).catch(()=>{});
     }
-    document.removeEventListener('touchstart', autoStart);
-    document.removeEventListener('click',      autoStart);
   }
-
-  document.addEventListener('touchstart', autoStart, { once: true });
-  document.addEventListener('click',      autoStart, { once: true });
+  document.addEventListener('touchstart', autoStart, { once:true });
+  document.addEventListener('click',      autoStart, { once:true });
 </script>
 
 <!-- Floating music toggle -->
-<div class="music-label" id="musicLabel">Tap to Play 🎵</div>
+<div class="music-label" id="musicLabel">Tap for Music</div>
 <button class="music-btn" id="musicBtn" onclick="toggleMusic()">🎵</button>
 
 <div class="card">
+
   <div class="shimmer-bar"></div>
 
+  <!-- Banner -->
   <div class="banner">
     <div class="banner-emoji">🌟 🍼 👶 🍼 🌟</div>
     <div class="banner-tag">You Are Cordially Invited To A</div>
     <div class="banner-heading">Baby Shower</div>
     <div class="banner-sub">✨ A New Star Is On Its Way ✨</div>
+    <!-- Cute sleeping baby with ZZZ animation -->
+    <div class="baby-section">
+      <span class="baby-zzz" style="animation-delay:.6s">z</span>
+      <span class="baby-zzz" style="animation-delay:.3s">z</span>
+      <span class="baby-float">🌙😴👶</span>
+      <span class="baby-zzz" style="animation-delay:.1s">z</span>
+      <span class="baby-zzz" style="animation-delay:.4s">z</span>
+    </div>
   </div>
 
   <div class="scallop"></div>
 
+  <!-- Body -->
   <div class="body">
 
     <div class="greeting">
@@ -316,8 +360,14 @@
       a precious new life into our world. 🌟
     </div>
 
+    <!-- Parents -->
     <div class="parents-block">
-      <div class="parents-tag">🎀 Celebrating The Parents-To-Be 🎀</div>
+      <!-- Fix: ribbon on one line with gradient color text -->
+      <div class="parents-tag">
+        <span>🎀</span>
+        <span>CELEBRATING THE PARENTS-TO-BE</span>
+        <span>🎀</span>
+      </div>
       <div class="parents-names">
         Asha<br/>
         <span class="amp-sep">&amp;</span><br/>
@@ -325,21 +375,36 @@
       </div>
     </div>
 
+    <!-- Date & Time — Custom SVG calendar (no emoji date issue) -->
     <div class="info-row">
       <div class="icard date">
-        <div class="icard-icon">📅</div>
+        <div class="icard-icon-wrap">
+          <!-- Custom SVG calendar always shows MAY 1 -->
+          <svg class="cal-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="6" width="40" height="36" rx="6" fill="#f3e8ff" stroke="#c084fc" stroke-width="2"/>
+            <rect x="2" y="6" width="40" height="12" rx="6" fill="#a855f7"/>
+            <rect x="2" y="14" width="40" height="4" fill="#a855f7"/>
+            <circle cx="14" cy="6" r="3" fill="#7c3aed"/>
+            <circle cx="30" cy="6" r="3" fill="#7c3aed"/>
+            <!-- MAY label -->
+            <text x="22" y="16" text-anchor="middle" fill="white" font-size="6" font-weight="bold" font-family="Nunito,Arial,sans-serif" letter-spacing="1">MAY</text>
+            <!-- Date number 1 -->
+            <text x="22" y="34" text-anchor="middle" fill="#7c3aed" font-size="16" font-weight="800" font-family="Nunito,Arial,sans-serif">1</text>
+          </svg>
+        </div>
         <div class="icard-label">Date</div>
-        <div class="icard-value">May 1<sup style="font-size:14px;font-weight:800;">st</sup></div>
+        <div class="icard-value">May 1<sup style="font-size:13px;font-weight:800;">st</sup></div>
         <div class="icard-sub">Friday, 2026</div>
       </div>
       <div class="icard time">
-        <div class="icard-icon">🕛</div>
+        <div class="icard-icon-wrap" style="font-size:28px;margin-bottom:6px;">🕛</div>
         <div class="icard-label">Time</div>
         <div class="icard-value">12:00 PM</div>
         <div class="icard-sub">Onwards</div>
       </div>
     </div>
 
+    <!-- Venue -->
     <div class="venue-card">
       <div class="venue-row">
         <div class="venue-icon-wrap">📍</div>
@@ -357,18 +422,25 @@
       </a>
     </div>
 
-    <div class="divider">🌟 &nbsp; 🍃 &nbsp; 🌟</div>
+    <div class="divider">🌸 &nbsp; 🌙 &nbsp; 🌸</div>
 
-    <div class="closing">
-      We look forward to celebrating<br/>
-      this special occasion with you!<br/>
-      <span style="font-size:24px;font-style:normal;">💛 🩵 🧡</span>
+    <!-- Closing -->
+    <div class="closing-wrap">
+      <div class="closing-inner">
+        <div class="closing-text">
+          We look forward to celebrating<br/>
+          this special occasion with you!
+        </div>
+        <div style="font-size:26px;margin-top:10px;">💛 💜 🧡 🩵</div>
+      </div>
     </div>
+
   </div>
 
   <div class="foot">🌈 With Love &amp; Joy — Asha &amp; Sasi Kumar 🌈</div>
-</div>
 
+</div>
 </body>
 </html>
 
+    
